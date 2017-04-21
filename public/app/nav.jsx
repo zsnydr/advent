@@ -1,13 +1,23 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import NavItem from './navItem';
 
-const activeStyle = { color: 'green' };
+const Nav = ({ history }) => {
+  const clickHandler = (e) => {
+    history.push(e.target.name);
+  };
 
-const Nav = () => (
-  <nav>
-    <NavLink exact activeStyle={activeStyle} to="/">Home</NavLink>
-    <NavLink activeStyle={activeStyle} to="/about">About</NavLink>
-  </nav>
-);
+  return (
+    <nav>
+      <NavItem name="" label="HOME" clickHandler={clickHandler} />
+      <NavItem name="arrivals" label="NEW ARRIVALS" clickHandler={clickHandler} />
+      <NavItem name="shop" label="SHOP" clickHandler={clickHandler} />
+      <NavItem name="blog" label="BLOG" clickHandler={clickHandler} />
+      <NavItem name="contact" label="CONTACT" clickHandler={clickHandler} />
+    </nav>
+  );
+}
+
+
 
 export default Nav;
+
