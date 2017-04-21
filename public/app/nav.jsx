@@ -7,7 +7,7 @@ const Nav = ({ history }) => {
   };
 
   return (
-    <nav>
+    <nav className="nav">
       <NavItem name="" label="HOME" clickHandler={clickHandler} />
       <NavItem name="arrivals" label="NEW ARRIVALS" clickHandler={clickHandler} />
       <NavItem name="shop" label="SHOP" clickHandler={clickHandler} />

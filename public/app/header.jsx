@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Header = () => (
-  <div>
+  <header className="header">
     <span>ADVENT</span>
     <a href="">
       <i className="fa fa-shopping-cart" />
@@ -18,7 +18,7 @@ const Header = () => (
     <a href="https://www.twitter.com">
       <i className="fa fa-twitter" />
     </a>
-  </div>
+  </header>
 );
 
 export default Header;
